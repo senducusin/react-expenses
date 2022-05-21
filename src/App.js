@@ -1,7 +1,7 @@
 import { v4 as uuidv4 } from "uuid";
 import Expenses from "./components/Expenses/Expenses";
 
-function App() {
+const App = () => {
   const expenses = [
     {
       id: uuidv4(),
@@ -29,6 +29,6 @@ function App() {
       <Expenses expenses={expenses} />
     </div>
   );
-}
+};
 
 export default App;
