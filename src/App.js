@@ -1,23 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
+import { v4 as uuidv4 } from "uuid";
+import Expenses from "./components/Expenses/Expenses";
 
 function App() {
+  const expenses = [
+    {
+      id: uuidv4(),
+      title: "Macbook Pro M1",
+      amount: 3000,
+      date: new Date(2023, 1, 13),
+    },
+    {
+      id: uuidv4(),
+      title: "Gaming PC",
+      amount: 4000,
+      date: new Date(2023, 1, 13),
+    },
+    {
+      id: uuidv4(),
+      title: "House",
+      amount: 50000,
+      date: new Date(2023, 1, 13),
+    },
+  ];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h2>Hello World!</h2>
+      <Expenses expenses={expenses} />
     </div>
   );
 }
